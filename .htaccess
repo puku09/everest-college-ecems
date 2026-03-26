@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /ecems/
+    
+    <FilesMatch "\.php$">
+        <IfModule mod_authz_core.c>
+            Require all granted
+        </IfModule>
+    </FilesMatch>
+</IfModule>
